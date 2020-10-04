@@ -10,7 +10,7 @@ if [ -z "$1" ] || [ -z "$2" ]; then
 fi
 
 VKD3D_VERSION="$1"
-VKD3D_SRC_DIR=`dirname $(readlink -f $0)`
+VKD3D_SRC_DIR=$(dirname "$(readlink -f $0)")
 VKD3D_BUILD_DIR=$(realpath "$2")"/vkd3d-$VKD3D_VERSION"
 VKD3D_ARCHIVE_PATH=$(realpath "$2")"/vkd3d-$VKD3D_VERSION.tar.zst"
 
